@@ -267,16 +267,17 @@
       justify-content: center;
       text-align: center;
       overflow: hidden;
-      background: linear-gradient(135deg, #0d1b6e 0%, #1a237e 30%, #4a148c 60%, #6a1b9a 80%, #7b1fa2 100%);
+      background: url(/images/AI.jpg);
+      background-repeat: no-repeat  ;
+      background-size: cover;
+      
     }
 
     .hero::before {
       content: '';
       position: absolute;
       inset: 0;
-      background:
-        radial-gradient(ellipse at 20% 50%, rgba(63,81,181,0.55) 0%, transparent 55%),
-        radial-gradient(ellipse at 80% 30%, rgba(106,27,154,0.45) 0%, transparent 50%);
+
     }
 
     .hero::after {
@@ -350,15 +351,15 @@
       max-width: 1100px;
       margin: 0 auto;
     }
-
-    .card {
-      background: #ffffff;
-      border-radius: 16px;
-      padding: 30px 28px 26px;
-      box-shadow: 0 2px 18px rgba(0,0,0,0.07);
-      display: flex;
-      flex-direction: column;
-    }
+  
+      .card {
+        background: #ffffff;
+        border-radius: 16px;
+        padding: 30px 28px 26px;
+        box-shadow: 0 2px 18px rgba(0,0,0,0.07);
+        display: flex;
+        flex-direction: column;
+      }
 
     .card-icon {
       width: 52px;
@@ -371,7 +372,15 @@
       flex-shrink: 0;
     }
 
-    .card-icon svg { width: 24px; height: 24px; fill: none; stroke: #fff; stroke-width: 2; stroke-linecap: round; stroke-linejoin: round; }
+    .card-icon svg { 
+      width: 24px; 
+      height: 24px; 
+      fill: none; 
+      stroke: #fff; 
+      stroke-width: 2; 
+      stroke-linecap: round; 
+      stroke-linejoin: round; 
+    }
 
     .icon-blue   { background: #3f51b5; }
     .icon-purple { background: #9c27b0; }
@@ -399,11 +408,11 @@
       color: #3f51b5; 
     }
 
-    .card-stats {
-      border-top: 1px solid #eef0f5;
-      padding-top: 14px;
-      margin-bottom: 22px;
-    }
+      .card-stats {
+        border-top: 1px solid #eef0f5;
+        padding-top: 14px;
+        margin-bottom: 22px;
+      }
 
     .stat-row {
       display: flex;
@@ -412,8 +421,13 @@
       margin-bottom: 6px;
     }
 
-    .stat-label { color: #8a97ad; }
-    .stat-value { font-weight: 700; color: #0f1923; }
+    .stat-label { 
+      color: #8a97ad; 
+    }
+    .stat-value { 
+      font-weight: 700; 
+      color: #0f1923; 
+    }
 
     .btn-explore {
       display: block;
@@ -454,6 +468,7 @@
       align-items: center;
       gap: 14px;
       margin-bottom: 10px;
+      
     }
 
     .format-icon {
@@ -467,13 +482,22 @@
       flex-shrink: 0;
     }
 
-    .format-icon svg { width: 20px; height: 20px; stroke: #fff; fill: none; stroke-width: 2; stroke-linecap: round; stroke-linejoin: round; }
-
-    .format-card h3 {
-      font-size: 1rem;
-      font-weight: 700;
-      color: #0f1923;
+    .format-icon svg { 
+      width: 20px; 
+      height: 20px; 
+      stroke: #fff; 
+      fill: none; 
+      stroke-width: 2; 
+      stroke-linecap: round; 
+      stroke-linejoin: round; 
     }
+
+      .format-card h3 {
+        font-size: 1rem;
+        font-weight: 700;
+        color: #0f1923;
+        
+      }
 
     .format-card p {
       font-size: 0.845rem;
@@ -487,6 +511,7 @@
       display: flex;
       flex-direction: column;
       gap: 8px;
+      
     }
 
     .feature-list li {
