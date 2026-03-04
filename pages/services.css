@@ -246,4 +246,385 @@
             z-index: 9999;
             box-shadow: 0 5px 15px rgba(0,0,0,0.3);
         }
-    
+    *, 
+    *::before, *::after { 
+      box-sizing: border-box;
+       margin: 0; 
+       padding: 0; 
+      }
+
+    body {
+      font-family: 'Inter', sans-serif;
+      background: #f8f9fc;
+      color: #1a1a2e;
+    }
+    .hero {
+      position: relative;
+      width: 100%;
+      min-height: 340px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      overflow: hidden;
+      background: linear-gradient(135deg, #0d1b6e 0%, #1a237e 30%, #4a148c 60%, #6a1b9a 80%, #7b1fa2 100%);
+    }
+
+    .hero::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background:
+        radial-gradient(ellipse at 20% 50%, rgba(63,81,181,0.55) 0%, transparent 55%),
+        radial-gradient(ellipse at 80% 30%, rgba(106,27,154,0.45) 0%, transparent 50%);
+    }
+
+    .hero::after {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background-image:
+        radial-gradient(circle, rgba(255,255,255,0.08) 1px, transparent 1px);
+      background-size: 28px 28px;
+    }
+
+    .hero-content {
+      position: relative;
+      z-index: 2;
+      padding: 60px 20px;
+    }
+
+    .hero-content h1 {
+      font-size: clamp(2rem, 5vw, 3.2rem);
+      font-weight: 800;
+      color: #ffffff;
+      line-height: 1.15;
+      margin-bottom: 4px;
+    }
+
+    .hero-content h1 span {
+      color: #b39ddb;
+      display: block;
+    }
+
+    .hero-content p {
+      margin-top: 18px;
+      font-size: clamp(0.95rem, 2vw, 1.05rem);
+      color: rgba(255,255,255,0.88);
+      max-width: 560px;
+      line-height: 1.65;
+    }
+    .section {
+      padding: 70px 40px;
+      background: #f4f6fb;
+    }
+
+    .section-white {
+      background: #ffffff;
+    }
+
+    .section-header {
+      text-align: center;
+      margin-bottom: 50px;
+    }
+
+    .section-header h2 {
+      font-size: clamp(1.6rem, 3.5vw, 2.2rem);
+      font-weight: 800;
+      color: #0f1923;
+    }
+
+    .section-header p {
+      margin-top: 10px;
+      color: #5a6a85;
+      font-size: 0.97rem;
+      max-width: 520px;
+      margin-left: auto;
+      margin-right: auto;
+      line-height: 1.6;
+    }
+    .cards-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+      gap: 28px;
+      max-width: 1100px;
+      margin: 0 auto;
+    }
+
+    .card {
+      background: #ffffff;
+      border-radius: 16px;
+      padding: 30px 28px 26px;
+      box-shadow: 0 2px 18px rgba(0,0,0,0.07);
+      display: flex;
+      flex-direction: column;
+    }
+
+    .card-icon {
+      width: 52px;
+      height: 52px;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin-bottom: 18px;
+      flex-shrink: 0;
+    }
+
+    .card-icon svg { width: 24px; height: 24px; fill: none; stroke: #fff; stroke-width: 2; stroke-linecap: round; stroke-linejoin: round; }
+
+    .icon-blue   { background: #3f51b5; }
+    .icon-purple { background: #9c27b0; }
+    .icon-green  { background: #43a047; }
+    .icon-red    { background: #e53935; }
+    .icon-indigo { background: #5c6bc0; }
+    .icon-orange { background: #ef6c00; }
+
+    .card h3 {
+      font-size: 1.05rem;
+      font-weight: 700;
+      color: #0f1923;
+      margin-bottom: 7px;
+    }
+
+    .card-desc {
+      font-size: 0.875rem;
+      color: #5a6a85;
+      margin-bottom: 20px;
+      line-height: 1.55;
+      flex: 1;
+    }
+
+    .card-desc span { 
+      color: #3f51b5; 
+    }
+
+    .card-stats {
+      border-top: 1px solid #eef0f5;
+      padding-top: 14px;
+      margin-bottom: 22px;
+    }
+
+    .stat-row {
+      display: flex;
+      justify-content: space-between;
+      font-size: 0.8rem;
+      margin-bottom: 6px;
+    }
+
+    .stat-label { color: #8a97ad; }
+    .stat-value { font-weight: 700; color: #0f1923; }
+
+    .btn-explore {
+      display: block;
+      width: 100%;
+      padding: 13px;
+      background: #0f1923;
+      color: #fff;
+      font-size: 0.88rem;
+      font-weight: 600;
+      border: none;
+      border-radius: 8px;
+      cursor: pointer;
+      text-align: center;
+      letter-spacing: 0.02em;
+      transition: background 0.2s;
+    }
+
+    .btn-explore:hover { 
+      background: #1e2d40; 
+    }
+
+    .formats-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+      gap: 24px;
+      max-width: 1100px;
+      margin: 0 auto;
+    }
+
+    .format-card {
+      background: #f0f2fb;
+      border-radius: 16px;
+      padding: 28px 26px;
+    }
+
+    .format-card-header {
+      display: flex;
+      align-items: center;
+      gap: 14px;
+      margin-bottom: 10px;
+    }
+
+    .format-icon {
+      width: 44px;
+      height: 44px;
+      border-radius: 10px;
+      background: linear-gradient(135deg, #5c6bc0, #9c27b0);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-shrink: 0;
+    }
+
+    .format-icon svg { width: 20px; height: 20px; stroke: #fff; fill: none; stroke-width: 2; stroke-linecap: round; stroke-linejoin: round; }
+
+    .format-card h3 {
+      font-size: 1rem;
+      font-weight: 700;
+      color: #0f1923;
+    }
+
+    .format-card p {
+      font-size: 0.845rem;
+      color: #5a6a85;
+      margin-bottom: 16px;
+      line-height: 1.55;
+    }
+
+    .feature-list {
+      list-style: none;
+      display: flex;
+      flex-direction: column;
+      gap: 8px;
+    }
+
+    .feature-list li {
+      display: flex;
+      align-items: center;
+      gap: 9px;
+      font-size: 0.855rem;
+      color: #3a4a60;
+    }
+
+    .check-icon {
+      width: 18px;
+      height: 18px;
+      flex-shrink: 0;
+      color: #43a047;
+    }
+
+    .support-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+      gap: 20px;
+      max-width: 1000px;
+      margin: 0 auto;
+      text-align: center;
+    }
+
+    .support-card {
+      background: #ffffff;
+      border-radius: 14px;
+      padding: 28px 20px 24px;
+      box-shadow: 0 1px 12px rgba(0,0,0,0.06);
+    }
+
+    .support-icon {
+      width: 50px;
+      height: 50px;
+      border-radius: 50%;
+      background: linear-gradient(135deg, #5c6bc0, #9c27b0);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin: 0 auto 14px;
+    }
+
+    .support-icon svg { 
+      width: 22px; 
+      height: 22px; 
+      stroke: #fff; 
+      fill: none; 
+      stroke-width: 2; 
+      stroke-linecap: round; 
+      stroke-linejoin: round; 
+    }
+
+    .support-card h3 {
+      font-size: 0.92rem;
+      font-weight: 700;
+      color: #0f1923;
+      margin-bottom: 8px;
+    }
+
+    .support-card p {
+      font-size: 0.815rem;
+      color: #5a6a85;
+      line-height: 1.55;
+    }
+
+    .support-card p span { 
+      color: #3f51b5; 
+    }
+
+  
+    .standout-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+      gap: 40px 30px;
+      max-width: 980px;
+      margin: 0 auto;
+      text-align: center;
+    }
+
+    .standout-icon {
+      width: 56px;
+      height: 56px;
+      border-radius: 50%;
+      background: linear-gradient(135deg, #5c6bc0, #9c27b0);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin: 0 auto 14px;
+    }
+
+    .standout-icon svg { 
+      width: 24px; 
+      height: 24px; 
+      stroke: #fff; 
+      fill: none; 
+      stroke-width: 2; 
+      stroke-linecap: round; 
+      stroke-linejoin: round; 
+    }
+
+    .standout-item h3 {
+      font-size: 0.95rem;
+      font-weight: 700;
+      color: #0f1923;
+      margin-bottom: 8px;
+    }
+
+    .standout-item p {
+      font-size: 0.83rem;
+      color: #5a6a85;
+      line-height: 1.6;
+      max-width: 220px;
+      margin: 0 auto;
+    }
+
+    .standout-item p span { 
+      color: #3f51b5; 
+    }
+
+    .cta-banner {
+      background: linear-gradient(135deg, #3f51b5 0%, #7b1fa2 50%, #9c27b0 100%);
+      padding: 70px 40px;
+      text-align: center;
+    }
+
+    .cta-banner h2 {
+      font-size: clamp(1.6rem, 3.5vw, 2.2rem);
+      font-weight: 800;
+      color: #ffffff;
+      margin-bottom: 14px;
+    }
+
+    .cta-banner p {
+      font-size: 0.97rem;
+      color: rgba(255,255,255,0.88);
+      max-width: 500px;
+      margin: 0 auto;
+      line-height: 1.65;
+    }
