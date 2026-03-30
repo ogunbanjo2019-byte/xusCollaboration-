@@ -166,17 +166,35 @@
             color: #1e84ff;
             margin-right: 12px;
             font-size: 22px;
+            animation-name: zoom;
+            animation-iteration-count: calc(2s);
+            animation-delay: 5s;
+
         }
 
         .newsletter-text {
             color: #adb5bd;
             font-size: 14px;
             margin-bottom: 15px;
-            display: block;
+            display: inline-block;
+        }
+
+        @media(max-width: 489px){
+          .first-son{
+            color: red 
+          }
+        }
+
+
+        @keyframes zoom {
+          0%{
+            translate: calc(.2s);
+          }
+          
         }
 
         .newsletter-input {
-            width: 100%;
+          width: 0%;  
             padding: 16px;
             background: rgba(255, 255, 255, 0.05);
             border: 1px solid rgba(255, 255, 255, 0.1);
@@ -246,4 +264,316 @@
             z-index: 9999;
             box-shadow: 0 5px 15px rgba(0,0,0,0.3);
         }
+
+  .mother{
+    background-image: url(/Images/hero.jpg);
+    color: #f8f9fa;
+    background-repeat: no-repeat;
+    background-size: cover;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    margin-top: -60px;
+  }    
+
+  .mom2{
+    margin: 30px;
+  }
+  
+  .first-son{
+    font-size: 30px;
+  }
+  .embrace{
+    font-size: 40px;
+    font-weight: bolder;
+    line-height: 80px;
+  }
+  .let{
+    font-size: 20px;
+    font-weight:20px;
+  }
+
+  .get{
+    padding: 10px 30px;
+    font-size: large;
+    font-weight: 30px;
+    background-color:#0f1c4c;  
+    color: #f8f9fa;
+    border-radius: 10px;
+    border: none;
+  }
+  
+  .read{
+    padding: 10px 30px;
+    font-size: large;
+    font-weight: 30px;
+    background-color:#1e84ff;  
+    color: #f8f9fa;
+    border-radius: 10px;
+    border: none;
+    margin: 10px;
+  }
+  .butt{
+    margin: 30px;
+    gap: 20px;
+  }
+
+  .grid{
+    display: grid;
+    grid-template-columns: repeat(4,2fr);
+    gap: 20px;
+    background-color: #1e84ff;
+    text-align: center;
+    padding: 20px;
     
+  }
+  .g-1{
+    background-color: #ffffff;
+    border-radius: 10px;
+    padding:40px ;
+  }
+  .g-2{
+    background-color: #ffffff;
+    border-radius: 10px;
+    padding:40px ;
+  }
+  .g-3{
+    background-color: #ffffff;
+    border-radius: 10px;
+    padding:40px ;
+  }
+  .g-4{
+    background-color: #ffffff;
+    border-radius: 10px;
+    padding:40px ;
+  }
+    
+  .mid{
+       display: grid;
+       grid-template-columns: repeat(3,1fr);
+       margin-bottom: -90px;
+       margin: 30px;
+       gap: -80px;
+       font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  }
+
+  .sis{
+    width: 300px;
+    height: 500px;
+    border-radius: 15px;
+    margin-left: 20px;
+  }
+  .bro{
+    width: 300px;
+    height: 500px;
+    border-radius: 15px;
+    margin-left: -70px;
+    margin-top: 80px;
+  }
+  .down{
+    text-align:justify;
+    margin-left: -80px;
+    list-style: none;
+    /* justify-content: space-between; */
+    padding: 40px;
+  }
+  .nan{
+    color: #1e84ff;
+  }
+  .you{
+    color: #1e84ff;
+  }
+  .ul{
+    list-style: none;
+    justify-content: center;
+    justify-items: space-between;
+  }
+  .oba{
+    background-color:#1e84ff;
+    border: none;
+    text-align: center;
+    text-decoration: none;
+    padding: 10px 30px;
+    color: #f8f9fa;
+    border-radius: 10px;
+    margin-top: 20px;
+    gap: 20px;
+    font-size: large;
+  }
+  .this{
+    font-size: larger;
+  }
+
+  .page{
+    background-color: #f0f0f0;
+    padding: 50px;
+  }
+  .we-we{
+    color: #1e84ff;
+  }
+
+
+  .what{
+    text-align: center;
+  }
+
+  .courses{
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    /* background-color: #ffffff; */
+    padding: 40px;
+    display: grid;
+       font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+       /* box-shadow: 5px white; */
+       gap: 30px;
+       box-shadow: 10px #242425;
+  }
+
+  .c-1{
+    background-color: #ffffff;
+    border-radius: 10px;
+    padding:20px 10px ;
+    box-sizing: content-box;
+    height: 250px;
+    box-shadow: 20px #242425;
+
+
+  }
+  .c-2{
+    background-color: #ffffff;
+    border-radius: 10px;
+    padding:20px 10px;
+
+  }
+
+  .c-3{
+    background-color: #ffffff;
+    border-radius: 10px;
+    padding:20px 10px ;
+    box-sizing: content-box;
+    height: 250px;
+
+  }
+  .later2{
+     width: 300px;
+    height: 600px;
+    border-radius: 15px;
+    margin-left: 130px;
+  }
+
+  .later3{
+    width: 300px;
+    height: 600px;
+    border-radius: 15px;
+    margin-left: 40px;
+    margin-top: 80px;
+  }
+  
+
+  .latest{
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    margin: 90px ;
+  }
+  .hosting{
+    color: #1e84ff;
+    font-size: large;
+  }
+  .sheu{
+        width: 50px;
+        height: 70px;
+        border-radius: 100%;
+  }
+  .john{
+    /* display: grid; */
+    /* grid-template-columns: repeat(2,1fr); */
+  }
+
+  .papa{
+    background-color:#dde4fa;
+    margin-top: -50px;
+  }
+
+  .blu{
+    color: #1e84ff;
+    margin-top: -40px;
+  }
+  .blue{
+    text-align: center;
+    font-size: larger;
+  }
+  .pop{
+    display: grid;
+    grid-template-columns: repeat(4,1fr);
+    margin: 40px;
+    gap: 30px;
+  }
+  .akobi{
+    background-color: #f8f9fa;
+    border-radius: 20px;
+    padding: 30px;
+  }
+  .second-born{
+     background-color: #f8f9fa;
+    border-radius: 20px;
+    padding: 30px;
+  }
+  .third-born{
+     background-color: #f8f9fa;
+    border-radius: 20px;
+    padding: 30px;
+  }
+  .four-born{
+     background-color: #f8f9fa;
+    border-radius: 20px;
+    padding: 30px;
+  }
+
+.tech{
+  text-align: center;
+  font-size: 30px;
+  color: #f8f9fa;
+  
+}
+.grand-dad{
+  background-color:#502ff8;
+}
+
+.ope{
+  width: 300px;
+  height: 200px;
+  border-radius: 15px 15px 0px 0px;
+  
+}
+
+.man{
+  margin-top: 70px;
+  justify-content: center;
+  display: grid;
+  grid-template-columns: 300px 300px 300px;
+  gap: 40px;
+  margin: 30px;
+  color: #f8f9fa;
+}
+
+.ponmo{
+  background-color: goldenrod;
+  border-radius: 20px;
+  height: 400px;
+}
+
+.click-here{
+  text-align: center;
+}
+
+.click-h{
+  padding: 15px 40px;
+  border-radius: 10px;
+  background-color:rgb(45, 45, 237);
+  color: #f0f0f0;
+  font-size: larger;
+  border-color:  #0b6de6;
+  font-weight: bold;
+}
+
+.mr-footer{
+  margin-top: -30px;
+}
